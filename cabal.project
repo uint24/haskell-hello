@@ -1,0 +1,15 @@
+packages: .
+
+with-compiler: ghc-8.10.7
+
+test-options: "--color"
+test-show-details: streaming
+
+jobs: $ncpus
+optimization: False
+
+package *
+  ghc-options:
+    -Wall
+    -Wcompat
+    -Wno-missing-signatures
